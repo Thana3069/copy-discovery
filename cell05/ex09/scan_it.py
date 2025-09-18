@@ -1,10 +1,19 @@
 import sys
 
-item_list = sys.argv[1:]
 
-if len(item_list) <= 1:
+if len(sys.argv) != 3:
     print("none")
 else:
-    word = item_list[0]
-    count = item_list.count(word)
-    print(count)
+    
+    keyword = sys.argv[1]
+   
+    string_to_search = sys.argv[2]
+
+  
+    count = string_to_search.count(keyword)
+
+   
+    if count == 0:
+        print("none")
+    else:
+        print(count)
